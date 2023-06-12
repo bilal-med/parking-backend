@@ -2,7 +2,6 @@ import * as React from "react";
 import { Form, FormikProvider, useFormik } from "formik";
 import * as Yup from "yup";
 import Input from "../ui/Input";
-import { Link } from "react-router-dom";    
 export default function Horaire() {
   const authValidationShema = Yup.object().shape({
     // destination: est maps
@@ -23,7 +22,7 @@ export default function Horaire() {
     },
     validationSchema: authValidationShema,
   });
-  const { errors, values, getFieldProps, touched } = formik;
+  const { errors, getFieldProps } = formik;
   return (
     <div className="flex flex-col">
       <section className="bg-gray-50">

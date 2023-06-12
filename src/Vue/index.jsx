@@ -22,7 +22,7 @@ export default function SignIn() {
     },
     validationSchema: authValidationShema,
   });
-  const { errors, values, getFieldProps, touched } = formik;
+  const { errors, getFieldProps } = formik;
   return (
     <div className="flex flex-col">
       <section className="bg-gray-50">
@@ -64,7 +64,7 @@ export default function SignIn() {
                   <p>
                     {" "}
                     <Link to={"/SignUp"}>you have an account ? </Link>{" "}
-                    <Link to={"/SignUp"}>you forget password ? </Link>
+                    <Link to={"/forgotPassword"}>you forget password ? </Link>
                   </p>
                 </Form>
               </FormikProvider>

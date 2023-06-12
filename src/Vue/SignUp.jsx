@@ -27,7 +27,7 @@ export default function SignUp() {
     },
     validationSchema: authValidationShema,
   });
-  const { errors, values, getFieldProps, touched } = formik;
+  const { errors, getFieldProps } = formik;
   return (
     <div className="flex flex-col">
       <section className="bg-gray-50">
