@@ -79,6 +79,18 @@ const Input = ({
                 }  px-3 py-2 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full `}
             style={{ appearance: "textfield" }}
           />
+        ) : type === "datetime-local" ? (
+          <input
+            type={type}
+            {...rest}
+            id={"input-" + label}
+            value={value}
+            className={`
+              ${icon && "pl-10"}
+              ${
+                error ? "border border-red-500" : "border-0"
+              }  px-3 py-2 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full `}
+          />
         ) : (
           <input
             type={type}

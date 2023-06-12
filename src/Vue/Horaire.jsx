@@ -47,7 +47,7 @@ export default function Horaire() {
                       label={"Date entrer"}
                       error={Boolean(errors.dateentrer)}
                       errorMessage={errors.dateentrer}
-                      type={"date"}
+                      type={"datetime-local"}
                       icon={"mdi:calendar"}
                     />
                   </div>
@@ -57,7 +57,7 @@ export default function Horaire() {
                       label={"Date sortie"}
                       error={Boolean(errors.datesortie)}
                       errorMessage={errors.datesortie}
-                      type={"date"}
+                      type={"datetime-local"}
                       icon={"mdi:calendar"}
                     />
                   </div>
