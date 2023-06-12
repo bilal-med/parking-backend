@@ -95,7 +95,7 @@ export default function SignUp() {
               </FormikProvider>
               <p>
                 {" "}
-                <Link to={"/SignIn"}>you have an account ? </Link>
+                <Link to={"/"}>you have an account ? </Link>
               </p>
             </div>
           </div>
