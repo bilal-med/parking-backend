@@ -3,8 +3,10 @@ import { Form, FormikProvider, useFormik } from "formik";
 import * as Yup from "yup";
 import Input from "../ui/Input";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom/dist/umd/react-router-dom.development";
 
 export default function SignIn() {
+  const navigate = useNavigate();
   const authValidationShema = Yup.object().shape({
     email: Yup.string()
       .email("email n'est pa valide")
@@ -18,11 +20,11 @@ export default function SignIn() {
       password: "",
     },
     onSubmit: (data) => {
-      console.log(data);
+      navigate("/horaire");
     },
     validationSchema: authValidationShema,
   });
-  const { errors, values, getFieldProps, touched } = formik;
+  const { errors, getFieldProps } = formik;
   return (
     <div className="flex flex-col">
       <section className="bg-gray-50">
@@ -64,7 +66,7 @@ export default function SignIn() {
                   <p>
                     {" "}
                     <Link to={"/SignUp"}>you have an account ? </Link>{" "}
-                    <Link to={"/SignUp"}>you forget password ? </Link>
+                    <Link to={"/forgotPassword"}>you forget password ? </Link>
                   </p>
                 </Form>
               </FormikProvider>
